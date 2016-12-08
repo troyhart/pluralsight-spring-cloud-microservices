@@ -1,0 +1,20 @@
+---
+server:
+  port: 8888
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          uri: file://${user.home}/personal-repos/pluralsight-springcloud-config-vals-1
+          #username: uname
+          #password: pass
+          search-paths:
+            - 'station*'
+          repos:
+            perf:
+              pattern:
+                - "*/perf"
+              uri: file://${user.home}/personal-repos/pluralsight-springcloud-config-vals-2
+              search-paths:
+                - 'station*'
