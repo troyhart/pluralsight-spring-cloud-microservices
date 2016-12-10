@@ -1,10 +1,18 @@
 ---
 server:
   port: 8888
+security:
+  basic:
+    enabled: true
+  user:
+    name: pluralsight
+    password: pluralsight
 spring:
   cloud:
     config:
       server:
+        encrypt:
+          enabled: false
         git:
           uri: file://${user.home}/personal-repos/pluralsight-springcloud-config-vals-1
           #username: uname
