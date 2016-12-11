@@ -1,4 +1,4 @@
-package pluralsight.demo;
+package pluralsight.springcloud.demo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

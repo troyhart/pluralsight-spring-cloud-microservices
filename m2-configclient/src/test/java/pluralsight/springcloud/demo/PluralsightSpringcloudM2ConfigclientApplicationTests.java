@@ -1,4 +1,4 @@
-package pluralsight.demo;
+package pluralsight.springcloud.demo;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

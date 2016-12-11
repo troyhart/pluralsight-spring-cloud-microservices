@@ -1,4 +1,4 @@
-package pluralsight.demo;
+package pluralsight.springcloud.demo;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -7,7 +7,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class PluralsightSpringcloudM2ConfigserverApplicationTests {
+public class PluralsightSpringcloudM1StartupApplicationTests {
 
 	@Test
 	public void contextLoads() {

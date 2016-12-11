@@ -1,4 +1,4 @@
-package pluralsight.demo;
+package pluralsight.springcloud.demo;
 
 import java.util.ArrayList;
 

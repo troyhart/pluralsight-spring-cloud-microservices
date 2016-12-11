@@ -1,4 +1,3 @@
----
 server:
   port: 8888
 security:
@@ -14,7 +13,7 @@ spring:
         encrypt:
           enabled: false
         git:
-          uri: file://${user.home}/personal-repos/pluralsight-springcloud-config-vals-1
+          uri: file://${user.home}/pluralsight-courses/springcloud-config-repo1
           #username: uname
           #password: pass
           search-paths:
@@ -22,7 +21,7 @@ spring:
           repos:
             perf:
               pattern:
-                - "*/perf"
-              uri: file://${user.home}/personal-repos/pluralsight-springcloud-config-vals-2
+                - '*/perf'
+              uri: file://${user.home}/pluralsight-courses/springcloud-config-repo2
               search-paths:
                 - 'station*'
