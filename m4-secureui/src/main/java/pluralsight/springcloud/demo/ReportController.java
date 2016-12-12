@@ -34,6 +34,9 @@ public class ReportController extends WebSecurityConfigurerAdapter {
   @RequestMapping("/reports")
   public String loadReports(Model model) {
     OAuth2AccessToken t = clientContext.getAccessToken();
+    // NOTE: this token can be used if you want to test
+    // api calls to secure services...that is, use a 
+    // rest client like Postman.
     System.out.println("Token: " + t.getValue());
 
     ResponseEntity<ArrayList<TollUsage>> tolls = oauth2RestTemplate.exchange("http://localhost:9001/services/tolldata",
@@ -47,7 +50,12 @@ public class ReportController extends WebSecurityConfigurerAdapter {
 
   @Override
   protected void configure(HttpSecurity http) throws Exception {
-    http.authorizeRequests().antMatchers("/", "/login**").permitAll().anyRequest().authenticated();
+    // @formatter:off
+    http.authorizeRequests()
+      .antMatchers("/", "/login**")
+        .permitAll()
+      .anyRequest().authenticated();
+    // @formatter:on
   }
 
   public static class TollUsage {
