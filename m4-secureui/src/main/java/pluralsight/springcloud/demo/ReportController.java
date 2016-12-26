@@ -20,8 +20,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @EnableOAuth2Sso
 public class ReportController extends WebSecurityConfigurerAdapter {
 
-  @Autowired
   private OAuth2ClientContext clientContext;
+
+  @Autowired
+  public ReportController(OAuth2ClientContext clientContext) {
+    this.clientContext = clientContext;
+  }
 
   @Autowired
   private OAuth2RestTemplate oauth2RestTemplate;
@@ -35,7 +39,7 @@ public class ReportController extends WebSecurityConfigurerAdapter {
   public String loadReports(Model model) {
     OAuth2AccessToken t = clientContext.getAccessToken();
     // NOTE: this token can be used if you want to test
-    // api calls to secure services...that is, use a 
+    // api calls to secure services...that is, use a
     // rest client like Postman.
     System.out.println("Token: " + t.getValue());
 
